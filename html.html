@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luma & Lens | Photography Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-page">
+  <header class="site-header">
+    <div class="brand">Luma & Lens</div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="html2.html">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#contact">Book a Session</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Fine-art photography</p>
+        <h1>Timeless photographs for life’s most meaningful chapters.</h1>
+        <p>Capturing weddings, portraits, and travel experiences with a warm editorial eye and a natural, story-first approach.</p>
+
+        <div class="cta-row">
+          <a class="button button-primary" href="html2.html">View Portfolio</a>
+          <button id="view-example" class="button button-secondary" type="button">Example Site</button>
+        </div>
+
+        <div class="hero-stats" aria-label="Studio statistics">
+          <div>
+            <strong>12+</strong>
+            <span>Years</span>
+          </div>
+          <div>
+            <strong>350+</strong>
+            <span>Sessions</span>
+          </div>
+          <div>
+            <strong>4.9/5</strong>
+            <span>Rated</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Photography cover image">
+        <div class="image-badge">Available worldwide</div>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Photographer at sunset">
+      </div>
+    </section>
+
+    <section class="featured-strip">
+      <span>Wedding</span>
+      <span>Portrait</span>
+      <span>Editorial</span>
+      <span>Travel</span>
+      <span>Brand Story</span>
+    </section>
+
+    <section class="info-grid" id="about">
+      <article class="info-card">
+        <p class="card-label">About</p>
+        <h2>Created for real life memories.</h2>
+        <p>My name is Triston, and I create visually rich photography experiences with a calm, modern approach. I specialize in portrait, destination, and editorial work that feels effortless and authentic.</p>
+      </article>
+
+      <article class="info-card">
+        <p class="card-label">Approach</p>
+        <h2>Natural light. Honest emotion.</h2>
+        <p>Every session is shaped around comfort, connection, and atmosphere so the final gallery reflects the people, places, and feelings behind the image.</p>
+      </article>
+    </section>
+
+    <section class="gallery-preview">
+      <div class="section-heading">
+        <p class="eyebrow center">Selected work</p>
+        <h2>Stories worth keeping.</h2>
+      </div>
+
+      <div class="preview-grid">
+        <figure class="photo-item">
+          <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80" alt="Couple portrait">
+          <figcaption>Wedding Stories</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80" alt="Nature photography">
+          <figcaption>Documentary Travel</figcaption>
+        </figure>
+        <figure class="photo-item">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80" alt="Travel photography">
+          <figcaption>Editorial Portraits</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <p class="eyebrow center">Client love</p>
+      <blockquote>
+        “The images felt like us—honest, warm, and effortlessly beautiful. Every frame told the story of the day.”
+      </blockquote>
+      <p class="quote-author">— Emma & Daniel</p>
+    </section>
+
+    <section class="order-section" id="order">
+      <div class="section-heading">
+        <p class="eyebrow center">Online ordering</p>
+        <h2>Choose your photography package.</h2>
+      </div>
+
+      <div class="shop-layout">
+        <div class="order-card">
+          <div class="package-list" aria-label="Photography package selector">
+            <button class="package active" type="button" data-name="Portrait Session" data-price="350">
+              <span>Portrait Session</span>
+              <strong>$350</strong>
+            </button>
+            <button class="package" type="button" data-name="Wedding Coverage" data-price="1200">
+              <span>Wedding Coverage</span>
+              <strong>$1,200</strong>
+            </button>
+            <button class="package" type="button" data-name="Travel Storytelling" data-price="900">
+              <span>Travel Storytelling</span>
+              <strong>$900</strong>
+            </button>
+          </div>
+
+          <div class="order-options">
+            <label>
+              Print size
+              <select id="print-size">
+                <option value="0">Standard digital gallery</option>
+                <option value="75">8x10 print (+$75)</option>
+                <option value="140">11x14 print (+$140)</option>
+                <option value="220">16x20 print (+$220)</option>
+              </select>
+            </label>
+
+            <label>
+              Additional images
+              <input id="additional-images" type="number" min="0" max="50" value="0">
+            </label>
+          </div>
+
+          <button id="order-now" class="button button-primary" type="button">Add to order</button>
+        </div>
+
+        <aside class="order-summary" aria-live="polite">
+          <h3>Your order</h3>
+          <div class="summary-row">
+            <span>Package</span>
+            <strong id="selected-package">Portrait Session</strong>
+          </div>
+          <div class="summary-row">
+            <span>Extra images</span>
+            <strong id="image-count">0</strong>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <strong id="order-total">$350</strong>
+          </div>
+          <p id="order-message">Ready to reserve your session.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="checkout-panel" id="checkout">
+      <div class="checkout-header">
+        <p class="eyebrow">Checkout</p>
+        <h2>Complete your order</h2>
+      </div>
+
+      <form class="checkout-form">
+        <div class="field-row">
+          <label>
+            First name
+            <input type="text" placeholder="First name">
+          </label>
+          <label>
+            Last name
+            <input type="text" placeholder="Last name">
+          </label>
+        </div>
+
+        <label>
+          Email address
+          <input type="email" placeholder="email@example.com">
+        </label>
+
+        <label>
+          Delivery preference
+          <select>
+            <option>Digital gallery delivery</option>
+            <option>Prints shipped to me</option>
+            <option>Pickup at studio</option>
+          </select>
+        </label>
+
+        <label>
+          Notes
+          <textarea rows="4" placeholder="Tell me about your session date, location, or desired timeline."></textarea>
+        </label>
+
+        <button type="submit" class="button button-primary">Place order</button>
+      </form>
+    </section>
+
+    <section class="contact-wrap" id="contact">
+      <div class="contact-panel">
+        <div class="contact-copy">
+          <p class="eyebrow">Booking</p>
+          <h2>Let’s create your next story.</h2>
+          <p>Available for weddings, portraits, and editorial commissions worldwide.</p>
+          <a href="mailto:name@domain.com">name@domain.com</a>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your name" aria-label="Your name">
+          <input type="email" placeholder="Email address" aria-label="Email address">
+          <textarea rows="4" placeholder="Tell me about your project" aria-label="Tell me about your project"></textarea>
+          <button type="submit" class="button button-primary">Send Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
+
